@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.CELPIPMockTest.CELPIPMockTestBackend.reading.ReadingArticlesMapper">
+    <select id="getReadingArticleById" resultMap="ReadingArticleMap">
+        select * from reading_articles where article_uid = #{articleUid}
+    </select>
+    <resultMap id="ReadingArticleMap" type="com.CELPIPMockTest.CELPIPMockTestBackend.reading.ReadingArticles">
+        <id property="articleUid" column="article_uid" />
+        <result property="testSuiteId" column="test_suite_id" />
+        <result property="testSuiteName" column="test_suite_name" />
+        <result property="practiceNumber" column="practice_number" />
+        <result property="articleNumber" column="article_number" />
+        <result property="articleTitle" column="article_title" />
+        <result property="articleInstruction" column="article_instruction" />
+        <result property="articleContent1" column="article_content_1" />
+        <result property="articleImage" column="article_image" />
+        <result property="questionInstruction1" column="question_instruction_1" />
+        <result property="articleContent2Index" column="article_content_2_index" />
+        <result property="articleContent2" column="article_content_2" />
+        <result property="questionInstruction2" column="question_instruction_2" />
+    </resultMap>
+</mapper>
