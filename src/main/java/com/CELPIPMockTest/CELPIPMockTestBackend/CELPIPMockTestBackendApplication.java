@@ -8,9 +8,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @SpringBootApplication
 @RestController
@@ -22,12 +20,12 @@ public class CELPIPMockTestBackendApplication {
 	}
 
 
-	@GetMapping("/")
-	public String hello() throws JsonProcessingException {
-		System.out.println("called URL '/'");
+	@GetMapping("/{id}")
+	public String hello(@PathVariable Integer id) throws JsonProcessingException {
+		System.out.println("called URL /" + id.toString());
 		SqlSession sqlSession = MybatisUtils.getSqlSession();
 		ReadingArticlesMapper readingArticlesMapper = sqlSession.getMapper(ReadingArticlesMapper.class);
-		ReadingArticles readingArticle = readingArticlesMapper.getReadingArticleById(111);
+		ReadingArticles readingArticle = readingArticlesMapper.getReadingArticleById(id);
 		ObjectMapper mapper = new ObjectMapper();
 		return mapper.writeValueAsString(readingArticle);
 	}
