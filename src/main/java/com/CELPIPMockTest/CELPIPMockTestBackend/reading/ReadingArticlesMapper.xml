@@ -15,7 +15,7 @@
         <result property="articleTitle" column="article_title" />
         <result property="articleInstruction" column="article_instruction" />
         <result property="articleContent1" column="article_content_1" />
-        <result property="articleImage" column="article_image" />
+        <result property="articleImageId" column="article_image_id" />
         <result property="questionInstruction1" column="question_instruction_1" />
         <result property="articleContent2Index" column="article_content_2_index" />
         <result property="articleContent2" column="article_content_2" />

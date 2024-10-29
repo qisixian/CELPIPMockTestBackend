@@ -10,7 +10,7 @@ create table reading_articles
     article_title           varchar,
     article_instruction     varchar,
     article_content_1       text,
-    article_image           bytea,
+    article_image_id        integer,
     question_instruction_1  varchar,
     article_content_2_index integer,
     article_content_2       text,
@@ -29,3 +29,14 @@ create table reading_questions
     choice_e         varchar,
     answer           varchar
 );
+
+create table media_files
+(
+    id   serial
+        constraint media_files_pk
+            primary key,
+    name varchar,
+    data bytea not null
+);
+
+insert into media_files(name, data) values ("111", pg_read_binary_file('/Users/sixian/Downloads/image111.png'));

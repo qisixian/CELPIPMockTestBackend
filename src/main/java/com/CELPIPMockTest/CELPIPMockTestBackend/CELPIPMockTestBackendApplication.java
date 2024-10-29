@@ -1,5 +1,7 @@
 package com.CELPIPMockTest.CELPIPMockTestBackend;
 
+import com.CELPIPMockTest.CELPIPMockTestBackend.common.MediaFiles;
+import com.CELPIPMockTest.CELPIPMockTestBackend.common.MediaFilesMapper;
 import com.CELPIPMockTest.CELPIPMockTestBackend.reading.ReadingArticles;
 import com.CELPIPMockTest.CELPIPMockTestBackend.reading.ReadingArticlesMapper;
 import com.CELPIPMockTest.CELPIPMockTestBackend.utils.MybatisUtils;
@@ -28,6 +30,16 @@ public class CELPIPMockTestBackendApplication {
 		ReadingArticles readingArticle = readingArticlesMapper.getReadingArticleById(id);
 		ObjectMapper mapper = new ObjectMapper();
 		return mapper.writeValueAsString(readingArticle);
+	}
+
+	@GetMapping("/media/{id}")
+	public byte[] getMediaStream(@PathVariable Integer id) {
+		System.out.println("called URL /media/" + id.toString());
+		SqlSession sqlSession = MybatisUtils.getSqlSession();
+		MediaFilesMapper mediaFilesMapper = sqlSession.getMapper(MediaFilesMapper.class);
+		MediaFiles mediaFiles = mediaFilesMapper.getMediaFileById(id);
+//		ObjectMapper mapper = new ObjectMapper();
+		return mediaFiles.getData();
 	}
 
 }

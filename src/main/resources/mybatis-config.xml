@@ -16,5 +16,6 @@
     </environments>
     <mappers>
         <mapper resource="com/CELPIPMockTest/CELPIPMockTestBackend/reading/ReadingArticlesMapper.xml"/>
+        <mapper resource="com/CELPIPMockTest/CELPIPMockTestBackend/common/MediaFilesMapper.xml"/>
     </mappers>
 </configuration>

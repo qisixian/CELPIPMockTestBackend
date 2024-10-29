@@ -10,7 +10,7 @@ public class ReadingArticles {
     private String articleTitle;
     private String articleInstruction;
     private String articleContent1;
-    private Byte[] articleImage;
+    private int articleImageId;
     private String questionInstruction1;
     private int articleContent2Index;
     private String articleContent2;
@@ -81,12 +81,12 @@ public class ReadingArticles {
         this.articleContent1 = articleContent1;
     }
 
-    public Byte[] getArticleImage() {
-        return articleImage;
+    public int getArticleImageId() {
+        return articleImageId;
     }
 
-    public void setArticleImage(Byte[] articleImage) {
-        this.articleImage = articleImage;
+    public void setArticleImageId(int articleImageId) {
+        this.articleImageId = articleImageId;
     }
 
     public String getQuestionInstruction1() {
@@ -125,7 +125,7 @@ public class ReadingArticles {
     public ReadingArticles() {
     }
 
-    public ReadingArticles(int testSuiteId, String testSuiteName, int practiceNumber, int articleNumber, int articleUid, String articleTitle, String articleInstruction, String articleContent1, Byte[] articleImage, String questionInstruction1, int articleContent2Index, String articleContent2, String questionInstruction2) {
+    public ReadingArticles(int testSuiteId, String testSuiteName, int practiceNumber, int articleNumber, int articleUid, String articleTitle, String articleInstruction, String articleContent1, int articleImageId, String questionInstruction1, int articleContent2Index, String articleContent2, String questionInstruction2) {
         this.testSuiteId = testSuiteId;
         this.testSuiteName = testSuiteName;
         this.practiceNumber = practiceNumber;
@@ -134,7 +134,7 @@ public class ReadingArticles {
         this.articleTitle = articleTitle;
         this.articleInstruction = articleInstruction;
         this.articleContent1 = articleContent1;
-        this.articleImage = articleImage;
+        this.articleImageId = articleImageId;
         this.questionInstruction1 = questionInstruction1;
         this.articleContent2Index = articleContent2Index;
         this.articleContent2 = articleContent2;
@@ -153,7 +153,7 @@ public class ReadingArticles {
                 ", articleTitle='" + articleTitle + '\'' +
                 ", articleInstruction='" + articleInstruction + '\'' +
                 ", articleContent1='" + articleContent1 + '\'' +
-                ", articleImage=" + articleImage +
+                ", articleImage=" + articleImageId +
                 ", questionInstruction1='" + questionInstruction1 + '\'' +
                 ", articleContent2Index=" + articleContent2Index +
                 ", articleContent2='" + articleContent2 + '\'' +
