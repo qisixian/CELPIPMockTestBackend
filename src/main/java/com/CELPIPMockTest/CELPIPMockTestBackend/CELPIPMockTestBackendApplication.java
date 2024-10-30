@@ -24,7 +24,6 @@ public class CELPIPMockTestBackendApplication {
 
 	@GetMapping("/article/{id}")
 	public String hello(@PathVariable Integer id) throws JsonProcessingException {
-		System.out.println("called URL /" + id.toString());
 		SqlSession sqlSession = MybatisUtils.getSqlSession();
 		ReadingArticlesMapper readingArticlesMapper = sqlSession.getMapper(ReadingArticlesMapper.class);
 		ReadingArticles readingArticle = readingArticlesMapper.getReadingArticleById(id);
@@ -34,7 +33,6 @@ public class CELPIPMockTestBackendApplication {
 
 	@GetMapping("/media/{id}")
 	public byte[] getMediaStream(@PathVariable Integer id) {
-		System.out.println("called URL /media/" + id.toString());
 		SqlSession sqlSession = MybatisUtils.getSqlSession();
 		MediaFilesMapper mediaFilesMapper = sqlSession.getMapper(MediaFilesMapper.class);
 		MediaFiles mediaFiles = mediaFilesMapper.getMediaFileById(id);
