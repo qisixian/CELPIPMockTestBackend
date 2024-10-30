@@ -22,7 +22,7 @@ public class CELPIPMockTestBackendApplication {
 	}
 
 
-	@GetMapping("/{id}")
+	@GetMapping("/article/{id}")
 	public String hello(@PathVariable Integer id) throws JsonProcessingException {
 		System.out.println("called URL /" + id.toString());
 		SqlSession sqlSession = MybatisUtils.getSqlSession();
