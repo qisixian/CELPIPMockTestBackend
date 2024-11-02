@@ -11,6 +11,6 @@ public class SecurityConfig {
 
     @Bean
     public WebSecurityCustomizer webSecurityCustomizer() {
-        return (web) -> web.ignoring().requestMatchers("/media/**").requestMatchers("/article/**");
+        return (web) -> web.ignoring().requestMatchers("/media/**").requestMatchers("/article/**").requestMatchers("/oauth/callback");
     }
 }

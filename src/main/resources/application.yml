@@ -1,0 +1,28 @@
+server:
+  port: 8080
+
+logging:
+  level:
+    org.springframework.security: INFO
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: 123456
+    driver-class-name: org.postgresql.Driver
+  web:
+    cors:
+      allowed-origins: "*"
+  application:
+    name: demo
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 482111489899-ottf2nos4sfi9hc8edv9s67ebao14gic.apps.googleusercontent.com
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  map-underscore-to-camel-case: true

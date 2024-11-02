@@ -1,8 +1,11 @@
 package com.CELPIPMockTest.CELPIPMockTestBackend.reading;
 
-import java.util.List;
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Select;
 
+
+@Mapper
 public interface ReadingArticlesMapper {
+
     ReadingArticles getReadingArticleById(int readingArticleUid);
-    List<ReadingArticleUid> getReadingArticleUid();
 }
