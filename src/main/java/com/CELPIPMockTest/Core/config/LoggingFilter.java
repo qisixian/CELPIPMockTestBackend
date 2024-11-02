@@ -1,4 +1,4 @@
-package com.CELPIPMockTest.CELPIPMockTestBackend.config;
+package com.CELPIPMockTest.Core.config;
 
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;

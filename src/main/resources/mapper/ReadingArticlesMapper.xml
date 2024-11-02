@@ -2,11 +2,11 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.CELPIPMockTest.CELPIPMockTestBackend.reading.ReadingArticlesMapper">
+<mapper namespace="com.CELPIPMockTest.Core.reading.ReadingArticlesMapper">
     <select id="getReadingArticleById" resultMap="ReadingArticleMap">
         select * from reading_articles where article_uid = #{articleUid}
     </select>
-    <resultMap id="ReadingArticleMap" type="com.CELPIPMockTest.CELPIPMockTestBackend.reading.ReadingArticles">
+    <resultMap id="ReadingArticleMap" type="com.CELPIPMockTest.Core.reading.ReadingArticles">
         <id property="articleUid" column="article_uid" />
         <result property="testSuiteId" column="test_suite_id" />
         <result property="testSuiteName" column="test_suite_name" />

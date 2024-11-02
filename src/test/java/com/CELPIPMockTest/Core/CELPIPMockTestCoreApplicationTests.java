@@ -1,14 +1,14 @@
-package com.CELPIPMockTest.CELPIPMockTestBackend;
+package com.CELPIPMockTest.Core;
 
-import com.CELPIPMockTest.CELPIPMockTestBackend.common.MediaFilesMapper;
-import com.CELPIPMockTest.CELPIPMockTestBackend.reading.ReadingArticles;
-import com.CELPIPMockTest.CELPIPMockTestBackend.reading.ReadingArticlesMapper;
+import com.CELPIPMockTest.Core.common.MediaFilesMapper;
+import com.CELPIPMockTest.Core.reading.ReadingArticles;
+import com.CELPIPMockTest.Core.reading.ReadingArticlesMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CELPIPMockTestBackendApplicationTests {
+class CELPIPMockTestCoreApplicationTests {
 
 
 	@Autowired

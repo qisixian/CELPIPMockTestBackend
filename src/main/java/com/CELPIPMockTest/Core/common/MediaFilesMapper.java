@@ -1,4 +1,4 @@
-package com.CELPIPMockTest.CELPIPMockTestBackend.common;
+package com.CELPIPMockTest.Core.common;
 
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;

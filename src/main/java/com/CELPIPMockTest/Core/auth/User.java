@@ -1,4 +1,4 @@
-package com.CELPIPMockTest.CELPIPMockTestBackend.auth;
+package com.CELPIPMockTest.Core.auth;
 
 import java.io.Serializable;
 import java.util.Date;

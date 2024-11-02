@@ -1,4 +1,4 @@
-package com.CELPIPMockTest.CELPIPMockTestBackend.reading;
+package com.CELPIPMockTest.Core.reading;
 
 
 public class ReadingArticles {

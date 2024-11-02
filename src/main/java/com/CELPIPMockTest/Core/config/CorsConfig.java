@@ -1,4 +1,4 @@
-package com.CELPIPMockTest.CELPIPMockTestBackend.config;
+package com.CELPIPMockTest.Core.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;

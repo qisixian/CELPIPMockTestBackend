@@ -1,4 +1,4 @@
-package com.CELPIPMockTest.CELPIPMockTestBackend.common;
+package com.CELPIPMockTest.Core.common;
 
 public class MediaFiles {
     private int id;

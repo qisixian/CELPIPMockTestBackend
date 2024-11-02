@@ -1,7 +1,6 @@
-package com.CELPIPMockTest.CELPIPMockTestBackend.reading;
+package com.CELPIPMockTest.Core.reading;
 
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
 
 
 @Mapper

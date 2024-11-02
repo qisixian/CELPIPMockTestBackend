@@ -1,20 +1,17 @@
-package com.CELPIPMockTest.CELPIPMockTestBackend.web;
+package com.CELPIPMockTest.Core.web;
 
-import com.CELPIPMockTest.CELPIPMockTestBackend.common.MediaFiles;
-import com.CELPIPMockTest.CELPIPMockTestBackend.common.MediaFilesMapper;
-import com.CELPIPMockTest.CELPIPMockTestBackend.reading.ReadingArticles;
-import com.CELPIPMockTest.CELPIPMockTestBackend.reading.ReadingArticlesMapper;
+import com.CELPIPMockTest.Core.common.MediaFiles;
+import com.CELPIPMockTest.Core.common.MediaFilesMapper;
+import com.CELPIPMockTest.Core.reading.ReadingArticles;
+import com.CELPIPMockTest.Core.reading.ReadingArticlesMapper;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
-import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.oauth2.client.OAuth2AuthorizedClient;
 import org.springframework.security.oauth2.client.annotation.RegisteredOAuth2AuthorizedClient;
 import org.springframework.security.oauth2.core.user.OAuth2User;
-import org.springframework.stereotype.Repository;
-import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
